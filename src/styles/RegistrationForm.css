@@ -1,0 +1,17 @@
+.registration-form-container {
+  margin-top: 150px;
+  max-width: 35%;
+  margin: 10% auto;
+}
+
+.registration-form-container > form {
+  padding: 25px;
+}
+
+.login-here-text {
+  padding-top: 25px;
+}
+
+.login-here-text > span {
+  margin-right: 10px;
+}

@@ -1,0 +1,52 @@
+{
+  "users": [
+    {
+      "id": "1690709568997",
+      "username": "Haseeb",
+      "password": "khan",
+      "groupId": "1"
+    },
+    {
+      "id": "1690720688413",
+      "username": "khan",
+      "password": "khan",
+      "groupId": "1"
+    }
+  ],
+  "groups": [
+    {
+      "id": "1",
+      "name": "Group 1"
+    },
+    {
+      "id": "2",
+      "name": "Group 2"
+    },
+    {
+      "id": "3",
+      "name": "Group 3"
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1690719953839,
+      "groupId": "1",
+      "title": "Task 1",
+      "description": "Hello to task 1",
+      "completed": false
+    },
+    {
+      "id": 1690719980040,
+      "groupId": "1",
+      "title": "Task 2",
+      "description": "This is task 2",
+      "completed": false
+    },
+    {
+      "id": 1690720707466,
+      "groupId": "2",
+      "title": "Task of group 2 user",
+      "description": "hello"
+    }
+  ]
+}

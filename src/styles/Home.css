@@ -1,0 +1,31 @@
+.home-container {
+  padding: 20px 100px;
+  max-width: 90%;
+  margin: 0 auto;
+  display: flex;
+  gap: 60px;
+}
+
+@media screen and (max-width: 1024px) {
+  .home-container {
+    padding: 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+}
+
+.add-task-form-container {
+  min-width: 50%;
+}
+
+.tasks-list-container {
+  min-width: 50%;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
