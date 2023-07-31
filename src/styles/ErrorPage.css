@@ -1,0 +1,16 @@
+.error-page-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-page-content {
+  text-align: center;
+}
+
+.error-page-content svg {
+  width: 100px;
+  height: 100px;
+  stroke: #f44336;
+}

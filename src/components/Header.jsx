@@ -1,6 +1,6 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/Header.css";
+import Button from "./Button";
 
 const Header = ({ user, onLogout }) => {
   const navigate = useNavigate();
@@ -17,9 +17,9 @@ const Header = ({ user, onLogout }) => {
           Username: {user?.username} | Group ID: {user?.groupId}
         </div>
 
-        <button className="logout-button" onClick={handleLogout}>
+        <Button className="logout-button" onClick={handleLogout}>
           Logout
-        </button>
+        </Button>
       </div>
     </div>
   );

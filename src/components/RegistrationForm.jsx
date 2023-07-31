@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { addUser, getGroups } from "../api";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-hot-toast";
 import "../styles/RegistrationForm.css";
+import Button from "./Button";
+import Input from "./Input";
 
 const RegistrationForm = () => {
   const navigate = useNavigate();
@@ -12,6 +14,7 @@ const RegistrationForm = () => {
     password: "",
     groupId: "",
   });
+
   const [groups, setGroups] = useState([]);
 
   useEffect(() => {
@@ -23,7 +26,7 @@ const RegistrationForm = () => {
       const response = await getGroups();
       setGroups(response.data);
     } catch (error) {
-      console.error("Error fetching groups:", error);
+      toast.error("Error fetching groups:");
     }
   };
 
@@ -40,7 +43,6 @@ const RegistrationForm = () => {
         localStorage.setItem("user", JSON.stringify(newUser));
         navigate("/home");
       } catch (error) {
-        console.log(error);
         toast.error("Registration Failed!");
       }
 
@@ -58,17 +60,15 @@ const RegistrationForm = () => {
       <h1>Task Management System</h1>
 
       <form onSubmit={handleSubmit}>
-        <input
-          type="text"
+        <Input
           placeholder="Username"
           value={user.username}
           onChange={(e) => setUser({ ...user, username: e.target.value })}
         />
 
-        <input
-          type="password"
+        <Input
           placeholder="Password"
-          value={user.password}
+          value={user.Password}
           onChange={(e) => setUser({ ...user, password: e.target.value })}
         />
 
@@ -85,7 +85,7 @@ const RegistrationForm = () => {
           ))}
         </select>
 
-        <button type="submit">Register</button>
+        <Button type="submit">Register</Button>
 
         <div className="login-here-text">
           <span>Already have an account?</span>

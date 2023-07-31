@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import db from "../db.json";
 import { toast } from "react-hot-toast";
 import "../styles/LoginForm.css";
+import Input from "./Input";
+import Button from "./Button";
 
 const LoginForm = () => {
   const [username, setUserName] = useState("");
@@ -40,21 +42,19 @@ const LoginForm = () => {
       <h1>Task Management System</h1>
 
       <form onSubmit={handleLogin}>
-        <input
-          type="text"
+        <Input
           placeholder="Username"
           value={username}
           onChange={(e) => setUserName(e.target.value)}
         />
 
-        <input
-          type="password"
-          placeholder="Password"
+        <Input
+          placeholder="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
 
-        <button type="submit">Login</button>
+        <Button type="submit">Login</Button>
 
         <div className="register-here-text">
           <span>Don&apos;t have an account?</span>

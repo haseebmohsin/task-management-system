@@ -1,5 +1,5 @@
-import React from "react";
 import "../styles/Task.css";
+import Button from "./Button";
 
 const Task = ({ task, toggleTask, deleteTask }) => {
   return (
@@ -11,18 +11,18 @@ const Task = ({ task, toggleTask, deleteTask }) => {
       </div>
 
       <div className="task-action-buttons-container">
-        <button
+        <Button
           className={`completed-button ${
             task.completed ? "complete" : "incomplete"
           }`}
           onClick={() => toggleTask(task.id)}
         >
           {task.completed ? "Incomplete" : "Complete"}
-        </button>
+        </Button>
 
-        <button className="delete" onClick={() => deleteTask(task.id)}>
+        <Button className="delete" onClick={() => deleteTask(task.id)}>
           Delete
-        </button>
+        </Button>
       </div>
     </div>
   );

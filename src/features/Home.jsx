@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import TaskForm from "../components/TaskForm";
 import TaskList from "../components/TaskList";
 import { toast } from "react-hot-toast";
 import { DragDropContext } from "react-beautiful-dnd";
-import "../styles/Home.css";
 import Header from "../components/Header";
+import "../styles/Home.css";
 import {
   getTasksByGroupId as getTasksByGroupIdAPI,
   addTask as addTaskAPI,
@@ -39,7 +39,7 @@ const Home = () => {
       setTasks(tasks);
       setIsLoading(false);
     } catch (error) {
-      console.error("Error fetching tasks:", error);
+      toast.error("Error fetching tasks");
       setIsLoading(false);
     }
   };
@@ -63,7 +63,7 @@ const Home = () => {
       setTasks([...tasks, response.data]);
       toast.success("Task added successfully!");
     } catch (error) {
-      console.error("Error adding task:", error);
+      toast.error("Error adding task");
     }
   };
 
@@ -85,7 +85,7 @@ const Home = () => {
       setTasks(updatedTasks);
       toast.success("Task status updated successfully!");
     } catch (error) {
-      console.error("Error updating task:", error);
+      toast.error("Error updating task");
     }
   };
 

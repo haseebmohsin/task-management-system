@@ -5,12 +5,6 @@
       "username": "Haseeb",
       "password": "khan",
       "groupId": "1"
-    },
-    {
-      "id": "1690720688413",
-      "username": "khan",
-      "password": "khan",
-      "groupId": "1"
     }
   ],
   "groups": [
@@ -32,21 +26,21 @@
       "id": 1690719953839,
       "groupId": "1",
       "title": "Task 1",
-      "description": "Hello to task 1",
-      "completed": false
+      "description": "This is task management system build as an assessment task from funfox.",
+      "completed": true
     },
     {
       "id": 1690719980040,
       "groupId": "1",
       "title": "Task 2",
-      "description": "This is task 2",
-      "completed": false
+      "description": "Mock server Json-server is used for this application.",
+      "completed": true
     },
     {
-      "id": 1690720707466,
-      "groupId": "2",
-      "title": "Task of group 2 user",
-      "description": "hello"
+      "id": 1690799378307,
+      "groupId": "1",
+      "title": "Task 3",
+      "description": "You can drag and drop to sort the tasks."
     }
   ]
 }

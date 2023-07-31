@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { RouterProvider } from "react-router-dom";
-import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import ToastProvider from "./providers/ToastProviders";
 import { router } from "./router";

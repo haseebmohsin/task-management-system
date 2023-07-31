@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "../styles/TaskForm.css";
+import Input from "./Input";
+import Button from "./Button";
 
 const TaskForm = ({ addTask }) => {
   const [title, setTitle] = useState("");
@@ -15,8 +17,7 @@ const TaskForm = ({ addTask }) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input
-        type="text"
+      <Input
         placeholder="Title"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
@@ -27,7 +28,8 @@ const TaskForm = ({ addTask }) => {
         value={description}
         onChange={(e) => setDescription(e.target.value)}
       />
-      <button type="submit">Add Task</button>
+
+      <Button type="submit">Add Task</Button>
     </form>
   );
 };

@@ -1,4 +1,3 @@
-import React from "react";
 import Task from "./Task";
 import "../styles/TaskList.css";
 import { Droppable, Draggable } from "react-beautiful-dnd";

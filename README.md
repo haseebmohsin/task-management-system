@@ -34,6 +34,11 @@ The app will run in the development mode and open http://localhost:3000 in your 
 5. Users can delete tasks they no longer need.
 6. Tasks can be re-ordered using drag and drop functionality.
 
+**Note**: You can use the following credentials to login or you can create a new user.
+
+username: 'Haseeb'
+password: 'khan'
+
 This Task Management System provides a simple and intuitive user interface to manage tasks effectively.
 
 ### Dependencies
