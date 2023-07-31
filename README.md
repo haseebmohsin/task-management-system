@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# Task Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a Task Management System built using React, where users can create, update, and delete tasks. The application uses JSON Server as a fake API to manage tasks.
 
-## Available Scripts
+## Getting Started
 
-In the project directory, you can run:
+To run this application, follow the steps below:
 
-### `npm start`
+1. Clone this repository to your local machine.
+2. Open a terminal and navigate to the project directory.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Start JSON Server
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Before running the frontend, you need to start the JSON Server to simulate the backend API. To do this, run the following command:
 
-### `npm test`
+`npm run start-server`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The JSON Server will start and serve the data from the src/db.json file on http://localhost:3001.
 
-### `npm run build`
+### Start the Frontend
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Once the JSON Server is up and running, you can start the frontend of the application. Open another terminal and navigate to the project directory.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+`npm start`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The app will run in the development mode and open http://localhost:3000 in your default browser.
 
-### `npm run eject`
+### Features
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. User can register and select a specific group to which they want to belong to.
+2. User can login and after login they will redirected to the task management home page.
+3. Users can add new tasks to the system by providing a task name and description.
+4. Tasks can be marked as completed or incomplete.
+5. Users can delete tasks they no longer need.
+6. Tasks can be re-ordered using drag and drop functionality.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This Task Management System provides a simple and intuitive user interface to manage tasks effectively.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Dependencies
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The application uses the following dependencies:
 
-## Learn More
+`axios` - For making HTTP requests to the JSON Server.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+`json-server` - To simulate a backend server and serve the data.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+`react` - The core library to build the user interface.
 
-### Code Splitting
+`react-beautiful-dnd` - For drag and drop functionality in task re-ordering.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+`react-hot-toast` - For displaying toast notifications.
 
-### Analyzing the Bundle Size
+Please make sure you have Node.js and npm installed on your machine to run the application.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+**Note:** They real time notifications are not possible while using json mock server, we can convert the backend of this app and use something like Express.js and than we can easily integrate real time notifications by using socket.io.
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Now you can use the Task Management System! Feel free to explore the code and enhance the features as per your requirements. Happy task managing!
